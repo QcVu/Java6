@@ -1,0 +1,98 @@
+@import url('../../../css/style.css');
+.banner-login {
+    background-color: var(--color-main);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    height: 70vh;
+}
+
+.form-login {
+    border-radius: 15px;
+    padding: 1.5rem;
+    width: 100%;
+}
+
+.form-control {
+    border: 1px solid black;
+}
+
+.btn-login {
+    border: 1px solid black;
+    border-radius: 1rem;
+    font-size: 1.25rem;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+    transition: .2s transform ease-in-out;
+    color: black;
+    &::after {
+        background-color: var(--color-background);
+        border-radius: 1rem;
+        content: '';
+        display: block;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: translate(-100%, 0) rotate(10deg);
+        transform-origin: top left;
+        transition: .2s transform ease-out;
+        will-change: transform;
+        z-index: -1
+    }
+    &:hover::after {
+        transform: translate(0, 0)
+    }
+    &:hover {
+        color: white;
+        border: 1px solid black;
+        will-change: transform;
+    }
+}
+.btnShowPassword:hover {
+    color: black;
+}
+
+.btnShowPassword:focus {
+    border: none;
+}
+.background {
+    height: 70vh;
+    width: auto;
+    border-radius: 0 15px 15px 0;
+}
+.slogan {
+    margin-bottom: 30px;
+    max-width: 100%;
+    display: none;
+}
+.fs {
+    font-size: 2.5rem;
+    line-height: 60px;
+}
+@media (max-width: 1453px) {
+    .background {
+        display: none;
+    }
+    .slogan {
+        display: block;
+    }
+}
+@media (min-width: 991px) and (max-width: 1453px) {
+    .fs {
+        font-size: 2.5rem;
+    }
+}
+@media (min-width: 380px) and (max-width: 453px) {
+    .fs {
+        font-size: 2rem;
+    }
+}
+@media (max-width: 380px) {
+    .fs {
+        font-size: 1rem;
+    }
+}
